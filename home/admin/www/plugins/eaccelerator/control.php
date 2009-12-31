@@ -80,7 +80,7 @@ if (is_array($info)) {
 ?>
 <br/><br/>
     <hr style="width:500px; color: #cdcdcd" noshade="noshade" size="1" />
-    <strong>Created by the eAccelerator team &ndash; <a href="http://eaccelerator.net">http://eaccelerator.net</a></strong><br /><br />
+    <strong>Cr&#233;&#233; par l&#39;quipe eAccelerator &ndash; <a target="_blank" href="http://eaccelerator.net">http://eaccelerator.net</a></strong><br /><br />
     eAccelerator <?php echo $info['version']; ?> [shm:<?php echo $info['shm_type']?> sem:<?php echo $info['sem_type']; ?>]<br />
     PHP <?php echo phpversion();?> [ZE <?php echo zend_version(); ?>]<br />
     Using <?php echo php_sapi_name();?> on <?php echo php_uname(); ?><br />
@@ -196,7 +196,7 @@ $info = eaccelerator_info();
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-    <title>eAccelerator control panel</title>
+    <title>Panneau de Contr&#244;le eAccelerator</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta http-equiv="Content-Language" content="en" />
@@ -269,7 +269,7 @@ $info = eaccelerator_info();
 </head>
 
 <body>
-<div class="head1"><span class="head1_item">eAccelerator control panel</span></div>
+<div class="head1"><span class="head1_item">Panneau de Contr&#244;le eAccelerator</span></div>
 <div class="head2">
 <?php
 $items = array(0 => 'Status', 1 => 'Script Cache');
@@ -302,33 +302,33 @@ switch ($sec) {
 <form action="<?php echo $_SERVER['PHP_SELF']?>?sec=0" method="post">
 <table>
 <tr>
-    <td class="h" colspan="2">Usage statistics</td>
+    <td class="h" colspan="2">Statistiques d&#39;utilisation</td>
 </tr>
 <tr>
-    <td class="er">Caching enabled</td> 
-    <td class="fl"><?php echo $info['cache'] ? '<span style="color:green"><b>yes</b></span>&nbsp;&nbsp;&nbsp;<input type="submit" name="cachingoff" value=" Disable "/>':'<span style="color:red"><b>no</b></span>&nbsp;&nbsp;&nbsp;<input type="submit" name="cachingon" value=" Enable "/>' ?></td>
+    <td class="er">Cache activ&#233;</td> 
+    <td class="fl"><?php echo $info['cache'] ? '<span style="color:green"><strong>Oui</strong></span>&nbsp;&nbsp;&nbsp;<input type="submit" name="cachingoff" value=" D&#233;sactiver "/>':'<span style="color:red"><strong>Non</strong></span>&nbsp;&nbsp;&nbsp;<input type="submit" name="cachingon" value=" Activer "/>' ?></td>
 </tr>
 <tr>
-    <td class="er">Total memory</td>
+    <td class="er">Total de m&#233;moire</td>
     <td class="fl"><?php echo format_size($info['memorySize']); ?></td>
 </tr>
 <tr>
-    <td class="er">Memory in use</td>
+    <td class="er">Memoire utilis&#233;e</td>
     <td class="fl"><?php echo format_size($info['memoryAllocated']).' ('.number_format(100 * $info['memoryAllocated'] / max(1, $info['memorySize']), 0).'%)';?></td>
 </tr>
 <tr>
     <td class="er" colspan="2"><?php echo space_graph($info['memoryAllocated'], $info['memorySize']);?></td>
 </tr>
 <tr>
-    <td class="er">Free memory</td>
+    <td class="er">M&#233;moire libre</td>
     <td class="fl"><?php echo format_size($info['memoryAvailable'])?></td>
 </tr>
 <tr>
-    <td class="er">Cached scripts</td>
+    <td class="er">Scripts en cache</td>
     <td class="fl"><?php echo number_format($info['cachedScripts']); ?></td>
 </tr>
 <tr>
-    <td class="er">Removed scripts</td> 
+    <td class="er">Scripts retir&#233;s</td> 
     <td class="fl"><?php echo number_format($info['removedScripts']); ?></td>
 </tr>
 </table>
@@ -338,18 +338,18 @@ switch ($sec) {
 
 <table>
 <tr>
-    <td class="h" colspan="2">Build information</td>
+    <td class="h" colspan="2">Information de version</td>
 </tr>
 <tr>
-    <td class="er">eAccelerator version</td> 
+    <td class="er">Version eAccelerator</td> 
     <td class="fl"><?php echo $info['version']; ?></td>
 </tr>
 <tr>
-    <td class="er">Shared memory type</td> 
+    <td class="er">Type de m&#233;moire partag&#233;e</td> 
     <td class="fl"><?php echo $info['shm_type']; ?></td>
 </tr>
 <tr>
-    <td class="er">Semaphore type</td> 
+    <td class="er">Type Semaphore</td> 
     <td class="fl"><?php echo $info['sem_type']; ?></td>
 </tr>
 </table>
@@ -365,16 +365,16 @@ switch ($sec) {
     <td class="h" colspan="2">Maintenance</td>
 </tr>
 <tr>
-    <td class="ec"><input type="submit" name="clear" value=" Clear cache "/></td> 
-    <td class="fl">Removed all scripts and data from shared memory and / or disk.</td>
+    <td class="ec"><input type="submit" name="clear" value=" Supprimer le cache "/></td> 
+    <td class="fl">Supprimer tous les scripts et les donn&#233;es de la m&#233;moire partag&#233;e et/ou sur le disque</td>
 </tr>
 <tr>
-    <td class="ec"><input type="submit" name="clean" value=" Delete expired "/></td> 
-    <td class="fl">Removed all expired scripts and data from shared memory and / or disk.</td>
+    <td class="ec"><input type="submit" name="clean" value=" Effacer les 'expir&#233;s' "/></td> 
+    <td class="fl">Supprimer tous les scripts expir&#233;s et donn&#233;es de la m&#233;moire partag&#233;e et/ou sur le disque.</td>
 </tr>
 <tr>
-    <td class="ec"><input type="submit" name="purge" value=" Purge cache "/></td> 
-    <td class="fl">Delete all 'removed' scripts from shared memory.</td>
+    <td class="ec"><input type="submit" name="purge" value=" Purger le cache "/></td> 
+    <td class="fl">Vider tous les scripts &#34;supprim&#233;s&#34; de la m&#233;moire partag&#233;e.</td>
 </tr>
 </table>
 </form>
@@ -429,12 +429,12 @@ switch ($sec) {
 ?>
 <table class="center">
 <tr>
-    <td class="h" colspan="2">Search</td>
+    <td class="h" colspan="2">Recherche</td>
 </tr>
 <tr>
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="get"><input type="hidden" name="sec" value="1"/>
-    <td class="el">Match filename:</td> 
-    <td class="fl"><input type="text" name="str" size="40" value="<?php echo isset($_GET['str']) ? $_GET['str'] : '' ?>"/>&nbsp;<input type="submit" value=" Find "/></td>
+    <td class="el">Nom du fichier :</td> 
+    <td class="fl"><input type="text" name="str" size="40" value="<?php echo isset($_GET['str']) ? $_GET['str'] : '' ?>"/>&nbsp;<input type="submit" value=" Rechercher "/></td>
     </form>
 </tr>
 </table>
@@ -448,7 +448,7 @@ switch ($sec) {
 ?>
 <table class="center">
 <tr>
-    <td colspan="1" style="text-align: left">Showing <?php echo $pg*$npp+1?> &ndash; <?php echo $pg*$npp+min($npp, $numres)?> of <?php echo $numtot?></td>
+    <td colspan="1" style="text-align: left">Affichage <?php echo $pg*$npp+1?> &ndash; <?php echo $pg*$npp+min($npp, $numres)?> de <?php echo $numtot?></td>
     <td colspan="4" style="text-align: right;"><small><?php echo pageselstr($pg, $pgs)?></small></td>
 </tr>
 <tr>

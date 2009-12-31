@@ -13,14 +13,14 @@ include "$root\home\admin\www\includes\.version";
 <body>
 
 <div id="wrap">
-  <div id="header"><a href="http://www.uniformserver.com"><img src="images/logo.jpg" align="left" alt="Uniform Server" /></a>
+  <div id="header" style="height : 80px;"><a href="http://www.uniformserver.com"><img src="images/logo.jpg" align="left" alt="Uniform Server" /></a>
     <h3 style="line-height: 18px; margin-left: 5px;" align="left">
       Uniform Server <?php include "$root\home\admin\www\includes\.version"; ?> <br />
-      Apache 2.2.14 <br />
-      MySQL 5.1.41 <br />
-      PHP 5_2_12 <br />
-      UniTray <br />
     </h3>
+    <h2 style="text-align:center; font-size:20px; line-height: 20px; margin-left: 5px;margin-top: 5px;" align="left">
+      Translation <br />
+      By: Kris 
+    </h2>
   </div>
 
 <?php
@@ -41,7 +41,7 @@ fclose($file);
 ?>
 
   <div id="menu">
-  <a href="http://<?php echo  getenv("HTTP_HOST");?>/apanel/">Server Administration</a>
+  <a href="http://<?php echo  getenv("HTTP_HOST");?>/apanel/">Administration du serveur</a>
 <?php 
    $filename = $root.'/usr/local/apache2/conf/ssl.crt/server.crt';
    if (file_exists($filename)) { 
@@ -53,43 +53,21 @@ fclose($file);
    ?>
 </div>
 
-  <div id="content">
-    <h2>Welcome to Uniform Server</h2>
-    <p>Welcome to the Uniform Server default start page. This page and every other file are being served from the main server root folder, "/www/". <br /> Additional support for 5-Nano can be found on the <a target="_1" href="http://wiki.uniformserver.com/index.php/Category:Uniform_Server_5.0-Nano">Wiki</a>.</p>
-    <p>&nbsp;</p>
-    <h2>Server Specifications</h2>
-  <table>
-   <tr valign="top">
-   <td>
-    <ul>
-      <li> Apache 2.2.14</li>
-      <li> MySQL 5.1.41-community</li>
-      <li> PHP 5_2_12</li>
-      <li> phpMyAdmin  3.2.4</li>
-      <li> ActivePerl 5.10.0.1005 - Plugin</li>
-      <li> ActivePerl 5.10.0.1006 - Plugin</li>
-      <li> UniTray</li>
-    </ul>
-   </td>
-   <td>
-     &nbsp;&nbsp;&nbsp;&nbsp;
-   </td>
-   <td>
-    <ul>
-      <li> Cron - Scheduler</li>
-      <li> DtDNS - IP address updater</li>
-      <li> db_backup - Database back-up</li>
-      <li> msmtp - Mail client for PHP  </li>
-    </ul>
-   </td>
-   </tr>
-  </table>
+<div align="center" ;>
+<img src="images/translation.gif" alt="Uniform Server" width="500" height="170" alt="Translation" />
+</div>
+
+  <div id="content" style="margin-top: 0px; padding-top: 0px;"  >
+    <h2>Bienvenue sur Uniform Server</h2>
+    <p>Bienvenue sur la page de d&#233;marrage par d&#233;faut d&#39;Uniform Server.<br />Cette page et tout autre fichier se trouvent &#224; partir du dossier racine du serveur principal &#34;/www/&#34;. Une aide compl&#233;mentaire sur 5-Nano peut-&#234;tre trouv&#233;e sur le <a target="_1" href="http://wiki.uniformserver.com/index.php/Category:Uniform_Server_5.0-Nano">Wiki</a>.</p>
+
+
   </div>
-  <div id="divider"> <a target="_1" href="http://www.uniformserver.com">Uniform Server</a> | <a target="_1" href="http://sourceforge.net/project/showfiles.php?group_id=53691&amp;package_id=48193">Download</a> | <a target="_1" href="http://blog.uniformserver.com">Blog</a> | <a target="_1" href="http://wiki.uniformserver.com/index.php/Main_Page">Wiki</a> | <a target="_1" href="http://forum.uniformserver.com">Support Forum</a> </div>
-  <br>
-  <p>The Uniform Server is a WAMP package that allows you to run a server on any XP or Vista Windows OS based computer. It is small and mobile to download or move around and can also be used or setup as a production/live server. Developers also use The Uniform Server to test their applications made with either PHP, MySQL, Perl, or the Apache HTTPd Server.</p>
+  <div id="divider"> <a target="_1" href="http://www.uniformserver.com">Uniform Server</a> | <a target="_1" href="http://sourceforge.net/project/showfiles.php?group_id=53691&amp;package_id=48193">T&#233;l&#233;chargement</a> | <a target="_1" href="http://blog.uniformserver.com">Blog</a> | <a target="_1" href="http://wiki.uniformserver.com/index.php/Main_Page">Wiki</a> | <a target="_1" href="http://forum.uniformserver.com">Forum de Support</a> </div>
+  <br />
+  <p>Uniform Server est un package WAMP qui permet de faire tourner un serveur sous Windows XP ou Vista. Il est l&#233;ger, mobile, facile &#224; t&#233;l&#233;charger ou &#224; d&#233;placer, et peut &#233;galement &#234;tre utilis&#233; comme serveur de production. Les d&#233;veloppeurs utilisent &#233;galement Uniform Server pour tester leurs applications r&#233;alis&#233;es sous PHP, MySQL, Perl, ou le serveur httpd Apache.</p>
   <p>&nbsp;</p>
-  <div id="divider">Developed By <a href="http://www.uniformserver.com/">The Uniform Server Development Team</a></div>
+  <div id="divider">D&#233;velopp&#233; par <a href="http://www.uniformserver.com/" target="_1">The Uniform Server Development Team</a></div>
 </div>
 </div>
 </body>
